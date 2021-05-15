@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/drawer_layout"
+    tools:context=".NotesActivity">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/belo"/>
+
+<RelativeLayout
+    android:id="@+id/notAciklama"
+    android:layout_below="@id/belo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop ="40dp"
+    android:layout_marginLeft="25dp"
+    android:layout_marginRight="25dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/detail_border">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gezi notlarınızı tamamen size özel olan not defterimize kaydedebilirsiniz."
+        android:textSize="15dp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        >
+    </TextView>
+
+</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/notesLinear"
+        android:layout_below="@+id/notAciklama"
+        android:paddingTop="25dp"
+        android:paddingRight="25dp"
+        android:paddingLeft="25dp"
+        android:paddingBottom="5dp">
+
+        <EditText
+            android:background="@drawable/detail_border"
+            android:padding="5dp"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:hint="Notunuz.."
+            android:id="@+id/noteTxt">
+        </EditText>
+
+        <TextView
+
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="7dp"
+            android:text="Kaydet"
+            android:id="@+id/noteGonder"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/noteTxt"
+            android:fontFamily="@font/poppins_medium"
+            android:onClick="notGonder"
+            android:background="@drawable/blue_fill__rounded_color"
+            android:layout_centerHorizontal="true"
+
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            tools:ignore="OnClick">
+        </TextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/notesLinear">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recyclerView_notes">
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white">
+
+        <include
+            layout="@layout/main_nav_drawer"/>
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

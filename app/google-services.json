@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "775723889035",
+    "project_id": "bitirme-aba6b",
+    "storage_bucket": "bitirme-aba6b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:775723889035:android:74bea8f9018b4df3933f8e",
+        "android_client_info": {
+          "package_name": "com.bilalkadam.bitirmeproje"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "775723889035-u6hagnfa4p5fht3f0degjc0jk49eailt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCA36R5mtG0p8Z--MJx-nG8GAHnHuuZjPM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "775723889035-u6hagnfa4p5fht3f0degjc0jk49eailt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

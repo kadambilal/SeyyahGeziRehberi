@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:id="@+id/drawer_layout"
+    tools:context=".ProfileActivity">
+
+
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/belo"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_below="@+id/belo"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:id="@+id/profileImage"
+        android:src="@drawable/profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        />
+
+
+    <RelativeLayout
+        android:id="@id/relativechangeImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileImage"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/blue_border_rounded_cornwe"
+        android:layout_centerHorizontal="true"
+
+        >
+
+    <TextView
+        android:id="@+id/changeProfileButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profil Resmi Seç"
+        android:onClick="changeImage"
+        android:layout_margin="10dp"
+        tools:ignore="OnClick"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        />
+    </RelativeLayout>
+
+
+
+<RelativeLayout
+    android:layout_marginTop="15dp"
+    android:background="@drawable/blue_border_rounded_cornwe"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/profilAltKisim"
+    android:layout_below="@+id/relativechangeImage"
+    android:layout_centerHorizontal="true"
+    >
+
+    <TextView
+        android:id="@+id/profileNameText"
+        android:layout_marginLeft="35dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="name"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_centerHorizontal="true"/>
+
+
+    <TextView
+        android:id="@+id/profileMailText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="mail"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_below="@+id/profileNameText"
+        android:layout_centerHorizontal="true" />
+
+
+    <RelativeLayout
+        android:id="@+id/relativeNote"
+        android:layout_below="@+id/profileMailText"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/blue_fill__rounded_color"
+        android:layout_margin="35dp"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/profileNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="42dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="20sp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:text="Notlarım"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:onClick="notlaraGit"
+        tools:ignore="OnClick" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativelogout"
+        android:layout_below="@+id/relativeNote"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/blue_fill__rounded_color"
+        android:layout_marginBottom="35dp"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/profilelogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="42dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="20sp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:text="Çıkış Yap"
+        android:onClick="ClickLogout"
+        tools:ignore="OnClick" />
+    </RelativeLayout>
+
+</RelativeLayout>
+
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white">
+
+        <include
+            layout="@layout/main_nav_drawer"/>
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:id="@+id/drawer_layout"
+    tools:context=".DetailActivity">
+
+
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relativeAnaLayout">
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/belo"/>
+    <RelativeLayout
+        android:layout_below="@+id/belo"
+        android:background="#fff"
+        android:id="@+id/SliderLayout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="vertical">
+
+        <com.denzcoskun.imageslider.ImageSlider
+            android:id="@+id/slider"
+            android:layout_width="match_parent"
+            android:layout_height="239dp"
+            android:layout_marginBottom="368dp"
+            app:auto_cycle="true"
+            app:delay="0"
+            app:period="5000"
+            app:placeholder="@drawable/whitebg"
+            tools:ignore="MissingClass">
+        </com.denzcoskun.imageslider.ImageSlider>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/bolumler"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/SliderLayout"
+        >
+
+        <TextView
+            android:padding="5dp"
+            android:background="@drawable/detail_border"
+            android:textColor="#000"
+            android:id="@+id/genelBakis"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Genel Bakış"
+            android:textSize="19sp" />
+
+        <TextView
+            android:padding="5dp"
+            android:background="@drawable/detail_border"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="#000"
+            android:id="@+id/yorumlar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Yorumlar"
+            android:textSize="19sp" />
+
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:visibility="visible"
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bolumler">
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:padding="10dp"
+            android:id="@+id/genelBakisLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/detail_border">
+                <TextView
+                    android:fontFamily="@font/poppins_regular"
+                    android:textStyle="bold"
+                    android:id="@+id/calismaText"
+                    android:textColor="@color/black"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="Ziyaret Saatleri :"
+                    android:textSize="16sp"
+                    />
+                <TextView
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/calismaSaatleri"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:textColor="#808080"
+                    android:textSize="16sp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ucretlayout"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/detail_border">
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="Giriş Ücreti : "
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="16sp" />
+                <TextView
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/girisUcreti"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:textColor="#808080"
+                    android:textSize="16sp"
+                    />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               android:layout_below="@+id/ucretlayout"
+                android:id="@+id/genelLayout"
+                android:background="@drawable/detail_border">
+                <RelativeLayout
+                            android:layout_marginTop="5dp"
+                             android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/gBilgi"
+                            android:orientation="horizontal">
+                                <TextView
+                                    android:textStyle="bold"
+                                    android:textColor="@color/black"
+                                    android:enabled="false"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:layout_weight="1"
+                                    android:paddingBottom="1dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:text="Genel Bilgi :"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:textSize="16sp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_below="@+id/gBilgi"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="#808080"
+                    android:id="@+id/genelBilgi"
+                    android:enabled="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingTop="1dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            </RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/genelLayout"
+    android:background="@drawable/detail_border"
+    android:layout_marginTop="5dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+               android:id="@+id/adress">
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="Adres : "
+                    android:enabled="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/adress"
+                android:orientation="horizontal">
+                <TextView
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="#808080"
+                    android:id="@+id/adres"
+                    android:enabled="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+</RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+    <ScrollView
+        android:visibility="gone"
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bolumler">
+
+
+        <LinearLayout
+            android:layout_below="@+id/bolumler"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:id="@+id/yorumlarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:id="@+id/yorumKismi">
+                <EditText
+                    android:background="@drawable/detail_border"
+                    android:padding="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:id="@+id/yorum"
+                    android:layout_width="235dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Yorumunuz.." />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="7dp"
+                    android:paddingLeft="7dp"
+                    android:layout_alignParentRight="true"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Gönder"
+                    android:layout_toRightOf="@+id/yorum"
+                    android:id="@+id/yorumYap"
+                    android:onClick="yorumYap"
+                    android:background="@drawable/blue_fill__rounded_color"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    tools:ignore="OnClick" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViewComment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white">
+
+        <include
+            layout="@layout/main_nav_drawer"/>
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

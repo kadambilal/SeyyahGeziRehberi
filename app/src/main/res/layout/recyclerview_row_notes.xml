@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/detail_border"
+    android:layout_marginTop="7dp"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recycler_row_notes_text"
+        android:textSize="18dp"
+        android:padding="5dp"
+        android:text="Yorum">
+    </TextView>
+
+
+
+</RelativeLayout>
